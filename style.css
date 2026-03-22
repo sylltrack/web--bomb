@@ -1,0 +1,34 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background: radial-gradient(circle, #0d1b2a 0%, #000 100%); 
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    color: #00ff41; font-family: 'Segoe UI', sans-serif;
+}
+.glass { 
+    background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 255, 65, 0.3); border-radius: 20px;
+    padding: 30px; width: 350px; text-align: center;
+}
+.neon-text { text-shadow: 0 0 10px #00ff41; margin-bottom: 20px; }
+.step { display: none; }
+.step.active { display: block; animation: fadeIn 0.5s; }
+p { font-size: 11px; margin-bottom: 10px; color: #888; letter-spacing: 2px; }
+input { 
+    width: 100%; padding: 12px; background: rgba(0,0,0,0.5); border: 1px solid #333;
+    border-radius: 10px; color: #00ff41; margin-bottom: 15px; text-align: center; font-size: 18px; outline: none;
+}
+button { 
+    width: 100%; padding: 12px; border: 1px solid #00ff41; background: transparent;
+    color: #00ff41; border-radius: 10px; cursor: pointer; font-weight: bold; transition: 0.3s;
+}
+button:hover { background: #00ff41; color: #000; box-shadow: 0 0 15px #00ff41; }
+.speed-btns { display: flex; gap: 10px; }
+#terminal { 
+    height: 180px; background: #000; border: 1px solid #222; margin-top: 15px;
+    border-radius: 5px; text-align: left; padding: 10px; font-size: 10px; overflow-y: auto; font-family: monospace;
+}
+.success { color: #00ff41; } .failed { color: #ff3e3e; }
+.stats { display: flex; justify-content: space-around; font-size: 14px; margin-bottom: 10px; }
+.stop-btn { margin-top: 15px; border-color: #ff3e3e; color: #ff3e3e; }
+.stop-btn:hover { background: #ff3e3e; color: #fff; box-shadow: 0 0 15px #ff3e3e; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
