@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTIMATE SMS B0MB3R v6.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container glass">
+        <h1 class="neon-text"><i class="fas fa-user-secret"></i> SMS B0MB3R</h1>
+        
+        <div id="step-1" class="step active">
+            <p>STEP 1: TARGET IDENTITY</p>
+            <input type="number" id="phone" placeholder="Enter 10 Digit Number">
+            <button onclick="nextStep(2)">NEXT <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div id="step-2" class="step">
+            <p>STEP 2: AMMUNITION COUNT</p>
+            <input type="number" id="count" placeholder="How many SMS?">
+            <button onclick="nextStep(3)">NEXT <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <div id="step-3" class="step">
+            <p>STEP 3: ATTACK SPEED</p>
+            <div class="speed-btns">
+                <button onclick="startAttack(0)">INSTANT</button>
+                <button onclick="startAttack(1)">1 SEC DELAY</button>
+            </div>
+        </div>
+
+        <div id="step-4" class="step">
+            <div class="stats">
+                <span class="success">SUCCESS: <b id="s-count">0</b></span>
+                <span class="failed">FAILED: <b id="f-count">0</b></span>
+            </div>
+            <div id="terminal">
+                <p>> Initializing hacking protocol...</p>
+            </div>
+            <button class="stop-btn" onclick="location.reload()">STOP ATTACK</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
